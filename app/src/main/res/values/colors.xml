@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2F3193</color>
+    <color name="colorPrimaryDark">#585FF6</color>
+    <color name="colorBackground">#f1f5f8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray600">#757575</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#00BCD4</color>
+    <color name="mbwColor">#c31432</color>
+    <color name="mbwColorBalck">#240b36</color>
+    <color name="mbwColorGray">#747474</color>
+    <color name="mbwColordarker_gray">#aaa</color>
+
+
+
+    <color name="mbwtakeComplainClear">#72AAAAAA</color>
+    <color name="mbwtakeComplainConfirm">#58B367</color>
+
+
+
+    <color name="mbwColorStatus">#911E1E</color>
+
+</resources>

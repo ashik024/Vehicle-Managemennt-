@@ -1,0 +1,129 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.mbw"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.5/mbw_api/api/src/public/v1/index.php/"'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+
+            lintOptions {
+                checkReleaseBuilds false // Add this
+                abortOnError false
+            }
+
+        }
+        debug {
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.5/mbw_api/api/src/public/v1/index.php/"'
+        }
+    }
+    dataBinding
+            {
+                enabled = true
+            }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //ssp//sdp
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.github.ceryle:RadioRealButton:v2.1.1'
+    //side search
+    implementation 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.95'
+    //retrofit
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    //
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    //network state
+    implementation 'com.github.jumadeveloper:networkmanager:0.0.2'
+    //spinkit(progress)
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //location
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    // runtime permission
+    implementation 'com.karumi:dexter:6.1.2'
+    // app updater
+    implementation 'com.github.javiersantos:AppUpdater:2.7'
+    // field validator
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+    //
+    implementation "com.airbnb.android:lottie:3.4.1"
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+
+    implementation 'com.google.firebase:firebase-core:17.3.0'
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
+    // Add the Firebase SDK for Crashlytics.
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+    implementation platform('com.google.firebase:firebase-bom:28.0.1')
+    implementation 'com.google.firebase:firebase-messaging:20.1.6'
+
+    // Add the Firebase SDK for Crashlytics.
+    implementation 'com.github.gcacace:signature-pad:1.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+
+    // Declare the dependency for the Analytics library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
+
+}
+
+repositories {
+    jcenter()
+}

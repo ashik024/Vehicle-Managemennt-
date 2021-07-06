@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:paddingTop="@dimen/_6sdp"
+        android:fontFamily="@font/droidserifbold"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15ssp"
+        android:background="@drawable/colouractionbar"/>
+
+
+    <SearchView
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/mbwColorGray"
+        android:padding="8dp"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/bg_material_edittext"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+
+        />
+
+<!--    <Button
+        android:id="@+id/csbt"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:drawable="@drawable/ic_search_black_24dp"
+        android:text="Search"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_weight="0.4"></Button>-->
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+        <ProgressBar
+            android:id="@+id/csNoloading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

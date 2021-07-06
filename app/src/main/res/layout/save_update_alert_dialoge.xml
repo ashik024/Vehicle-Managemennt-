@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/a"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:src="@drawable/ic_update"
+        android:padding="@dimen/_5sdp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_dialog"
+        android:layout_below="@+id/a"
+        android:layout_marginTop="@dimen/_14ssp"
+        android:layout_marginBottom="@dimen/_14ssp"
+        android:text="Please Update Your Application \n Go to this Link"
+        android:fontFamily="@font/droidserifbolditalic"
+        android:textSize="@dimen/_12ssp"
+        android:gravity="center_horizontal"
+        android:textColor="#D51E5C"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_14ssp"
+        android:layout_marginEnd="@dimen/_14ssp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvUrlHit"
+        android:layout_below="@+id/text_dialog"
+        android:layout_marginBottom="@dimen/_14ssp"
+        android:text="http://multibrandinfotech.com/mbw/"
+        android:fontFamily="@font/droidserifbolditalic"
+        android:textSize="@dimen/_12ssp"
+        android:autoLink="web"
+        android:gravity="center_horizontal"
+        android:textColor="#2196F3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_14ssp"
+        android:layout_marginEnd="@dimen/_14ssp"/>
+
+</RelativeLayout>

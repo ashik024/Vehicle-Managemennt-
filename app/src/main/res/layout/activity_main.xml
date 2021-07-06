@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EAEAEA"
+            android:fillViewport="true">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    tools:context=".MainActivity">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbarMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@drawable/colouractionbar"
+                        android:elevation="@dimen/_5sdp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:menu="@menu/menu_main"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                        <ImageView
+                            android:id="@+id/syncdata"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:foregroundGravity="right"
+                            android:src="@drawable/ic_sync__1_"
+
+                            />
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <LinearLayout
+                        android:id="@+id/vHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:background="@drawable/not_round_shape_bottom_righ"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@+id/toolbarMain">
+
+                        <TextView
+                            android:id="@+id/HeaderCustomer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="@dimen/_30sdp"
+                            android:gravity="center"
+                            android:text="MultiBrand Workshop"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/HeaderCustomer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:gravity="center"
+                            android:text="Vehicle Solution For All Brands"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp"
+
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/HeaderCustomername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"
+
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvOrder"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_110sdp"
+
+                        android:layout_marginTop="@dimen/_16sdp"
+
+                        android:background="@drawable/main_button_round_color"
+                        app:cardElevation="4dp"
+                        app:layout_constraintEnd_toStartOf="@+id/takeComplain"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vHeader">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_button_round_color"
+
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_carservice"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:text="Car Entry"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_10sdp"
+                                android:textAllCaps="true"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/takeComplain"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_110sdp"
+
+                        app:cardElevation="4dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cvOrder"
+                        app:layout_constraintTop_toTopOf="@+id/cvOrder">
+
+                        <LinearLayout
+                            android:id="@+id/llorderList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_button_round_color"
+                            android:gravity="center"
+                            android:orientation="vertical"
+
+                            android:padding="@dimen/layout_margin">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/ic_complaint" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Take Complain"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAddCars"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_110sdp"
+
+                        android:layout_marginTop="21dp"
+                        android:background="@drawable/main_button_round_color"
+                        app:cardElevation="4dp"
+                        app:layout_constraintEnd_toEndOf="@+id/cvOrder"
+                        app:layout_constraintStart_toStartOf="@+id/cvOrder"
+                        app:layout_constraintTop_toBottomOf="@+id/cvOrder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_button_round_color"
+
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_add_more_car"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:text="Add More Cars"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_10sdp"
+                                android:textAllCaps="true"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAddMoreComplain"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_110sdp"
+
+                        android:layout_marginTop="21dp"
+                        android:background="@drawable/main_button_round_color"
+                        app:cardElevation="4dp"
+                        app:layout_constraintEnd_toEndOf="@+id/takeComplain"
+                        app:layout_constraintStart_toStartOf="@+id/takeComplain"
+                        app:layout_constraintTop_toBottomOf="@+id/takeComplain">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_button_round_color"
+
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/add_more_complain_pic"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="4dp"
+                                android:text="Add More Complain"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_10sdp"
+                                android:textAllCaps="true"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/spin_kit"
+                    style="@style/SpinKitView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:SpinKit_Color="@color/mbwColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</layout>

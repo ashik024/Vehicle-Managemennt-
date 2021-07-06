@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "270920842719",
+    "project_id": "multibrandworkshop-5a836",
+    "storage_bucket": "multibrandworkshop-5a836.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270920842719:android:3bec4738a11530a12f986a",
+        "android_client_info": {
+          "package_name": "com.example.mbw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270920842719-0gouf5kgjoc7sj8q3va0c9idbeiphc22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChGhfehl55BbAHp7EWcKFZkxTgr07sRas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270920842719-0gouf5kgjoc7sj8q3va0c9idbeiphc22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
